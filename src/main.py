@@ -8,7 +8,7 @@ from message import Message, timeout_message
 
 def send_request(request: Message) -> Message:
     s = socket(AF_INET, SOCK_STREAM)
-    s.settimeout(12)
+    s.settimeout(15)
 
     host = request.get_header(b'Host')
     port = 80
